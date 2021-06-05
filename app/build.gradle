@@ -3,6 +3,10 @@ plugins {
 }
 
 android {
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
     compileSdkVersion 30
 
     defaultConfig {
@@ -29,6 +33,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+}
+
+android{
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+
 }
 
 dependencies {

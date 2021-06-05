@@ -10,5 +10,15 @@
     <string name="add_image_from_gallery">Add image from gallery</string>
     <string name="share_item_title">Share</string>
     <string name="add_image_from_camera">Add image from camera</string>
-    <string name="refresh">Refresh</string>/>
+    <string name="refresh">Refresh</string>
+    <string name="enter_image_dimensions">enter image dimensions</string>
+    <string name="add_image">Add Image</string>
+    <string name="fetching_random_image">Fetching random image...</string>
+    <string name="choose_palette_colour">Choose palette colour</string>
+    <string name="fetch_image">FETCH IMAGE</string>
+    <string name="height">height</string>
+    <string name="width">width</string>
+    <string name="choose_labels">Choose labels</string>
+    <string name="add">ADD</string>
+    <string name="label">label</string>/>
 </resources>
