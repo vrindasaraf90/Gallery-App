@@ -14,6 +14,7 @@ FEAUTURES
 
 
 APK
+https://github.com/vrindasaraf90/Gallery-App/releases/download/6.2.0/app-debug.apk
 
 
 
