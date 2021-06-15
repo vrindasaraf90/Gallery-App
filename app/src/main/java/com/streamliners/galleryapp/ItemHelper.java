@@ -36,7 +36,7 @@ public class ItemHelper {
     private Context context;
     private  Bitmap bitmap;
     private Set<Integer> colors;
-    String redirectUrl;
+    public String redirectUrl;
 
 
     //Triggers -----------------------------------------------------------------------------

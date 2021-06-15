@@ -139,6 +139,7 @@ public class AddImageDialog implements ItemHelper.OnCompleteListener {
 
     //step3 - show data
     private void showData(String redirectUrl, Set<Integer> colors, List<String> labels) {
+        this.redirectUrl = redirectUrl;
 
 
         //loads image from glide cache

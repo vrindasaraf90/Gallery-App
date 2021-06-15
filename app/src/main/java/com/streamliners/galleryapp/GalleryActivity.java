@@ -39,12 +39,16 @@ import com.streamliners.galleryapp.databinding.ActivityDemoBinding
 import com.streamliners.galleryapp.databinding.ChipColorBinding;
 import com.streamliners.galleryapp.databinding.ItemCardBinding;
 import com.streamliners.galleryapp.models.Item;
+import com.streamliners.galleryapp.ItemHelper;
 
 import java.util.List;
 import java.util.Set;
 
 public class GalleryActivity extends AppCompatActivity {
     ActivityDemoBinding b;
+    String redirectUrl;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -165,8 +169,10 @@ public class GalleryActivity extends AppCompatActivity {
     }
 
     private void inflateViewForItem(Item item) {
+
         //inflate layout
         ItemCardBinding binding = ItemCardBinding.inflate(getLayoutInflater());
+
 
         //bind data
         Glide.with(this)
