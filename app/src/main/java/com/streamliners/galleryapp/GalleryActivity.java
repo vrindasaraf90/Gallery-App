@@ -169,14 +169,15 @@ public class GalleryActivity extends AppCompatActivity {
         ItemCardBinding binding = ItemCardBinding.inflate(getLayoutInflater());
 
         //bind data
-        binding.imageView.setImageBitmap(item.image);
+        Glide.with(this)
+                .load(item.url)
+                .into(binding.imageView);
         binding.title.setText(item.label);
         binding.title.setBackgroundColor(item.color);
 
         //adding to the list
         b.list.addView(binding.getRoot());
     }
-
 
     public void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -188,7 +189,6 @@ public class GalleryActivity extends AppCompatActivity {
         }
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
-
 
 //    private void loadImage() {
 //        Glide.with(this)
