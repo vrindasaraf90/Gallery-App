@@ -170,6 +170,7 @@ public class GalleryActivity extends AppCompatActivity {
 
         //bind data
         Glide.with(this)
+                .asBitmap()
                 .load(item.url)
                 .into(binding.imageView);
         binding.title.setText(item.label);

@@ -138,12 +138,13 @@ public class AddImageDialog implements ItemHelper.OnCompleteListener {
     }
 
     //step3 - show data
-    private void showData(String image, Set<Integer> colors, List<String> labels) {
+    private void showData(String redirectUrl, Set<Integer> colors, List<String> labels) {
 
 
         //loads image from glide cache
         Glide.with(context)
                 .asBitmap()
+                .load(redirectUrl)
                 .into(b.imageView);
 
         //b.imageView.setImageBitmap(image);
@@ -190,7 +191,7 @@ public class AddImageDialog implements ItemHelper.OnCompleteListener {
             }
         });
     }
-    
+
 //    private void handleAddImageEvent() {
 //        int colorChipId = b.colourChips.getCheckedChipId();
 //        int labelChipId = b.Labels.getCheckedChipId();
