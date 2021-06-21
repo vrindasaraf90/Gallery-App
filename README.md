@@ -12,9 +12,17 @@ FEAUTURES
 
 -Displaying added image in card view
 
+-Saved data in shared preferences
+
+-Used async task to get redirected Url
+
+-Adding image from gallery
+
+-Sharing image card
+
 
 APK
-https://github.com/vrindasaraf90/Gallery-App/releases/download/6.3.1.0/app-debugg.apk
+https://github.com/vrindasaraf90/Gallery-App/releases/download/6.3.2.0/app-debuggg.apk
 
 VIDEO
 
