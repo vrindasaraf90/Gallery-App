@@ -33,6 +33,8 @@ public class AddImageDialog implements ItemHelper.OnCompleteListener {
     private boolean isCustomLabel;
     private AlertDialog dialog;
     String redirectUrl;
+    int flag =0;
+    public Item item;
 
 
     //inflate dialog layout
@@ -135,6 +137,25 @@ public class AddImageDialog implements ItemHelper.OnCompleteListener {
     private void fetchRandomImage(int x) {
         new ItemHelper()
                 .fetchData(x, context, this);
+    }
+
+    void fetchDataForGallery(String url,Context context,OnCompleteListener listener){
+        this.listener = listener;
+        this.context = context;
+
+        if (context instanceof GalleryActivity) {
+            inflater = ((GalleryActivity) context).getLayoutInflater();
+            b = ActivityDialogAddImageBinding.inflate(inflater);
+        } else {
+            dialog.dismiss();
+            listener.onError("Cast Exception");
+            return;
+        }
+        dialog = new MaterialAlertDialogBuilder(context, R.style.CustomDialogTheme)
+                .setView(b.getRoot())
+                .show();
+        new ItemHelper().fetchData(url,context,this);
+
     }
 
     //step3 - show data
@@ -269,6 +290,41 @@ public class AddImageDialog implements ItemHelper.OnCompleteListener {
     public void onError(String error) {
         dialog.dismiss();
         listener.onError(error);
+    }
+
+    public void showEditImageDialog(Item item,Context context,OnCompleteListener listener) {
+        this.context=context;
+        this.listener=listener;
+        this.item=item;
+
+        flag=1;
+
+        if (context instanceof GalleryActivity) {
+            inflater = ((GalleryActivity) context).getLayoutInflater();
+            b = ActivityDialogAddImageBinding.inflate(inflater);
+        } else {
+            dialog.dismiss();
+            listener.onError("Cast Exception");
+            return;
+        }
+        b.imageDimensionRoot.setVisibility(View.GONE);
+        b.progressIndicatorRoot.setVisibility(View.VISIBLE);
+        b.addBtn.setText("UPDATE");
+        dialog = new MaterialAlertDialogBuilder(context, R.style.CustomDialogTheme)
+                .setView(b.getRoot())
+                .show();
+        new ItemHelper().fetchData(item.url, context, new ItemHelper.OnCompleteListener() {
+            @Override
+            public void onFetched(String redirectUrl, Set<Integer> colors, List<String> labels) {
+                showData(redirectUrl, colors, labels);
+            }
+
+            @Override
+            public void onError(String s) {
+
+            }
+        });
+
     }
 
     interface OnCompleteListener{

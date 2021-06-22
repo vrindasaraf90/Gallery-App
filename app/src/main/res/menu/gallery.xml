@@ -8,4 +8,23 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_add_image"/>
 
+    <item
+        android:id="@+id/addImageFromGallery"
+        android:title="Add Image From Gallery"
+        android:icon="@drawable/ic_add_from_gallery"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/sortAlpha"
+        android:icon="@drawable/ic_sort_by_alpha"
+        android:title="SortAlpha"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        android:title="search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+
 </menu>

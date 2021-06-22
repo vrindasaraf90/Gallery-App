@@ -15,6 +15,7 @@ public class RedirectUrlHelper extends AsyncTask<String , Void, String> {
 
     //constructor for RedirectUrlHelper
     public RedirectUrlHelper(OnUrlFetched onUrlFetched) {
+
         this.onUrlFetched = onUrlFetched;
     }
 
