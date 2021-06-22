@@ -14,8 +14,14 @@ FEAUTURES
 
 
 APK
-https://github.com/vrindasaraf90/Gallery-App/releases/download/6.2.0/app-debug.apk
+https://github.com/vrindasaraf90/Gallery-App/releases/download/6.3.1.0/app-debugg.apk
+
+VIDEO
+
+https://user-images.githubusercontent.com/72187181/121891221-21e18f80-cca6-11eb-8eae-9de8b2357b5b.mp4
 
 
 
-IMAGES
+
+
+
